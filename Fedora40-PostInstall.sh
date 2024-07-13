@@ -42,8 +42,8 @@ fi
 
 # 4. Update system
 if prompt_user "Do you want to update the system?"; then
-	    sudo dnf clean all && sudo dnf update -y || { echo "System update failed"; exit 1; }
-	    sudo dnf upgrade -y || { echo "System upgrade failed"; exit 1; }
+	sudo dnf clean all && sudo dnf update -y || { echo "System update failed"; exit 1; }
+	sudo dnf upgrade -y || { echo "System upgrade failed"; exit 1; }
         sudo dnf autoremove -y || { echo "System autoremove failed"; exit 1; }
         sudo dnf distro-sync -y || { echo "System upgrade failed"; exit 1; }
 else
@@ -51,14 +51,14 @@ else
 fi
 
 # 5. Update firmwares
-if prompt_user "Do you want to update firmware?"; then
-        sudo fwupdmgr get-devices || { echo "Failed to get firmware devices"; exit 1; }
-        sudo fwupdmgr refresh --force || { echo "Failed to refresh firmware metadata"; exit 1; }
-        sudo fwupdmgr get-updates || { echo "Firmware get updates failed"; exit 1; }
-        sudo fwupdmgr update -y || { echo "Firmware update failed"; exit 1; }
-else
-    echo "Skipping firmware update"
-fi
+#if prompt_user "Do you want to update firmware?"; then
+#        sudo fwupdmgr get-devices || { echo "Failed to get firmware devices"; exit 1; }
+#        sudo fwupdmgr refresh --force || { echo "Failed to refresh firmware metadata"; exit 1; }
+#        sudo fwupdmgr get-updates || { echo "Firmware get updates failed"; exit 1; }
+#        sudo fwupdmgr update -y || { echo "Firmware update failed"; exit 1; }
+#else
+#   echo "Skipping firmware update"
+#fi
 
 # 6. Add additional repositories
 if prompt_user "Do you want to add Fedora Workstation third-party repositories and RPM Fusion repositories?"; then
