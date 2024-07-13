@@ -9,7 +9,6 @@ This script automates post-installation setup for Fedora 40. It includes tasks s
 - Change Hostname: Allows the user to change the system hostname.
 - Speed Up DNF: Configures DNF for faster package downloads and updates.
 - System Update: Cleans, updates, upgrades, and synchronizes system packages.
-- Firmware Update: Updates system firmware using fwupdmgr.
 - Install RPM Fusion Repositories: Adds free and non-free RPM Fusion repositories for additional software packages.
 - Install Media Codecs: Installs the complete gstreamer stack, ffmpeg, h264, opencv.
 - Install Full Mesa Stack: Adds support for Vulkan and DirectX.
