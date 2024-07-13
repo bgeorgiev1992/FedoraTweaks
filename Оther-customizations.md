@@ -76,7 +76,7 @@ EOF
 
 **Install some system utilities**
 ```bash
-sudo dnf install -y gnome-extensions-app file-roller file-roller-nautilus nautilus-extensions nautilus-python gnome-tweaks
+sudo dnf install -y gnome-extensions-app file-roller file-roller-nautilus nautilus-extensions nautilus-python gnome-tweaks deja-dup
 ```
 ## Mail clients
 
